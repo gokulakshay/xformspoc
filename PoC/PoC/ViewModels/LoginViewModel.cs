@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoC.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -11,6 +12,7 @@ namespace PoC.ViewModels
     {
         public Action DisplayInvalidLoginPrompt;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
+        public INavigation Navigation = null;
         private string email;
         public string Email
         {
@@ -38,9 +40,13 @@ namespace PoC.ViewModels
         }
         public void OnSubmit()
         {
-            if (email != "macoratti@yahoo.com" || password != "secret")
+            if (email != "test@test.com" || password != "test")
             {
                 DisplayInvalidLoginPrompt();
+            }
+            else
+            {
+                Navigation?.PushAsync(new DashboardPage());
             }
         }
     }

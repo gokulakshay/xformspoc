@@ -11,7 +11,10 @@ namespace PoC.Views
     {
         public LoginPage()
         {
-            var vm = new LoginViewModel();
+            var vm = new LoginViewModel
+            {
+                Navigation = Navigation
+            };
             this.BindingContext = vm;
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
             InitializeComponent();

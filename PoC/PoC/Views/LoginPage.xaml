@@ -9,11 +9,11 @@
             <Frame BackgroundColor="#BF043055" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
-                           PlaceholderColor="White" HeightRequest="40"   
+                           PlaceholderColor="White" HeightRequest="50"   
                            Keyboard="Email"  
                            TextColor="White"/>
                     <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
-                           PlaceholderColor="White" HeightRequest="40"   
+                           PlaceholderColor="White" HeightRequest="50"   
                            IsPassword="True"  
                            TextColor="White"/>
                 </StackLayout>
